@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+<div id="container">
+    <div id="sidebar">
+        <select id="dataset-selector" onchange="changeDataset()">
+            <option value="filled_circular_dataset.json">Filled Circular Clusters</option>
+            <option value="circular_dataset.json">Circular Clusters</option>
+            <option value="two_moons_dataset.json">Two Moons Clusters</option>
+        </select>
+        <button onclick="nextIteration()">Next Iteration (E)</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="addCentroid()">Add Random Centroid</button>
+        <div id="iteration-display">Iteration: 0</div>
+    </div>
+    <script src="main.js" defer></script>
+</div>
+</body>
+</html>
